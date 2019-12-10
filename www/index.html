@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link type="text/css" rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+        <title>Blank App</title>
+    </head>
+    <title>
+  TUS Mental Test
+</title>
+    <body class="fell-english" >
+        <script type="text/javascript" src="cordova.js"></script>
+        <header class="row">
+    <div class="container">
+      <h1>Total Urban Survival Mental Test</h1>
+      <!--<h2>Yo</h2> -->
+    </div>
+  </header>
+  <div id="intro">
+    <div class="container text-background">
+      <img src="images/el-salvador-gang2.jpg" />
+      <p>
+        You've just completed your nightly workout at the gym. Pleasantly tired and pumped up after achieving your milestone, you begin making your way back home.
+      </p>
+      <p>
+        Suddenly you remember you had an appointment with your significant other, and you're late! You take note of your options.. Can you get there on time going your usual route? Or do you take the old path through the slums that saved your ass the last time you forgot about an appointment?
+      </p>
+   
+
+    <div class="container">
+	<div id="timer"></div>
+	<p><label class="container"><input type="radio" name="radio"  onclick="panelSwitch('intro', 'longway')">Long Way
+</label></p>
+<p><label class="container"><input type="radio" name="radio"  onclick="panelSwitch('intro', 'darkstreet')">Dark Street
+</label></p>
+      
+    </div>
+  </div>
+   </div>
+
+  <div id="longway" class="hidden">
+    <div class="container text-background">
+      <img src="images/dragon-fire-png.png" />
+      <p>
+		 You're already late- no point in rushing too hard. At a brisk pace, you make your way through the red lights, the crows, the vehicular manslaughter candidates.. And you come across a scene that sends shivers down your spine.
+      </p>
+      <p>
+			You knew these clowns from a past life, one that you haven't dropped out of for nearly long enough. They thought you could be good at selling drugs, and they weren't wrong. Little did they know, the cops knew that about you as well, and they made you an offer you couldn't refuse. Now they're one stash and two incarcerated members short.
+		</p>
+      <p>
+        And they've taken notice of you. Never the most welcoming faces, they wave you over. What do you do?
+      </p>
+      <div class="container">
+	<div id="timer"></div>
+	<label class="container"><input type="radio" name="radio" onclick="panelSwitch('longway', 'walkup')">Walk up to them
+</label>
+<label class="container"><input type="radio" name="radio" onclick="panelSwitch('longway', 'headdown')">Keep your head down and walk on
+</label>
+<label class="container"><input type="radio" name="radio" onclick="panelSwitch('longway', 'lookaround')">Take a moment to look around
+</label>
+    </div>
+  </div>
+  </div>
+  
+  <div id="walkup" class="hidden">
+    <div class="container text-background">
+      <img src="images/dragon-fire-png.png" />
+      <p>
+		Maybe you wholly believed your own innocence, maybe you thought for a moment they had forgotten.. You're not quite sure what lead you to find yourself walking up to them, appeasing grin plastered to your face as if you were visiting old colleagues from school.
+		</p>
+      <p>
+		Whatever the case, so far so good. "Ese" is thrown around liberally, you reminisce about the good old times of drug running and brotherly gangsta life.. you wonder why you even were afraid to talk with these guys to begin with. 
+		</p>
+      <p>
+        "We were gonna visit Old Marley. Why don't you come on over with us?" The casual invitation makes your heart race, and not quite because of bromance.
+      </p>
+      <div class="container">
+	<div id="timer"></div>
+	<label class="container"><input type="radio" name="radio" onclick="goldOrPotion()">Refuse and walk on
+</label>
+<label class="container"><input type="radio" name="radio" onclick="panelSwitch('walkup', 'walkup2')">Might as well go
+</label>
+    </div>
+  </div>
+  </div>
+  
+  <div id="headdown" class="hidden">
+    <div class="container text-background">
+      <img src="images/dragon-fire-png.png" />
+      <p>
+			They noticed you, you noticed them... but you keep on walking. You don't really want to give them any kind of satisfaction about anything right now, you don't need that in your life. Right? 
+	  </p>
+      <p>
+			A sinking feeling in your stomach, growing steadily and mercilessly spurs your feet along. You mutters curses for every distracted shoulder shove, for every red pedestrian sign on your way. 
+		</p>
+      <p>
+			It makes you look over your shoulder. And after a few blocks away, you see them. 
+      </p>
+      <div class="container">
+	<div id="timer"></div>
+
+<label class="container"><input type="radio" name="radio" onclick="panelSwitch('headdown', 'headdown2')">Keep on walking
+</label>
+<label class="container"><input type="radio" name="radio" onclick="panelSwitch('headdown', 'detour')">Take a long detour
+</label>
+    </div>
+  </div>
+  </div>
+  
+  <div id="headdown2" class="hidden">
+    <div class="container text-background">
+      <img src="images/dragon-fire-png.png" />
+      <p>
+		Whatever, it's a crowded night, they can glare all they want... It won't do them any good. They'd get arrested. There's witnesses everywhere. You're already late to your appointment. You convince yourself non-confrontation is the key and jog on.
+	  </p>
+      <p>
+		You finally arrive home, a small house a ways away from the center of town. For all your efforts rushing back, it's gotten pretty late and-
+	  </p>
+      <p>
+		You hear a thud just behind your head and the next thing you know it, you're in the dark.
+		</p>
+      <div class="container">
+	<div class="container">
+<button  onclick="panelSwitch('headdown2', 'headdown3')">... awaken..</button>
+    </div>
+    </div>
+  </div>
+  </div>
+  
+    <div id="headdown3" class="hidden">
+    <div class="container text-background">
+      <img src="images/dragon-fire-png.png" />
+      <p>
+		... you come to after God knows how long. Sirens are blaring in the distance. Someone made a right mess with your clothes and riffed through your belongings. The front door is left ajar.. You can hear a familiar voice sobbing inside.
+		</p>
+      <p>
+		You rush inside, only to stumble and fall. Disorientation and the countless pieces of broken furniture sprawled across the floor make heading inside a chore. Yet you press on, and finally you reach the person you lead a gang to.
+	  </p>
+      <div class="container">
+	<div class="container">
+<button  onclick="defeat('headdown3')">Accept your fate</button>
+    </div>
+    </div>
+  </div>
+  </div>
+  
+  <div id="lookaround" class="hidden">
+    <div class="container text-background">
+      <img src="images/dragon-fire-png.png" />
+      <p>
+		You are far away from them, in the middle of the street.. you can afford a few seconds to take in your surroundings. Mildly developed urban area, with no building taller than six floors. Old part of town, close to the haunts of your worst times.
+	  </p>
+      <p>
+		The people around you are weary and eager to get back home. Decently illuminated area, save for the alleyways between buildings.. of which the gangsters are standing over as guardians of the Underworld, being given a wide berth by the locals. No police in sight.
+		</p>
+      <div class="container">
+	<div id="timer"></div>
+	<label class="container"><input type="radio" name="radio" onclick="panelSwitch('lookaround', 'walkup')">Walk up to them
+	</label>
+	<label class="container"><input type="radio" name="radio" onclick="panelSwitch('lookaround', 'headdown')">Keep your head down and walk on
+	</label>
+    </div>
+  </div>
+  </div>
+  
+  <div id="detour" class="hidden">
+    <div class="container text-background">
+      <img src="images/dragon-fire-png.png" />
+      <p>
+		You decide to listen to your basic instincts, taking a long route around town, trying to make your pursuers lose track. Not so easy, is it.. There's several of them and they're fanning out, covering your tracks. After a few turns of this, you decide to just...
+	  </p>
+      <div class="container">
+	<div id="timer"></div>
+	<
+<label class="container"><input type="radio" name="radio" onclick="panelSwitch('detour', 'detour1')">Enter the closest bus, or train, or whatever
+</label>
+<label class="container"><input type="radio" name="radio" onclick="panelSwitch('detour', 'detour2')">Leg it as fast as you can
+</label>
+    </div>
+  </div>
+  </div>
+  
+  <div id="detour1" class="hidden">
+    <div class="container text-background">
+      <img src="images/dragon-fire-png.png" />
+      <p>
+		Muttering a silent curse against your life's choices up to this point, you 
+	  </p>
+      <div class="container">
+	<div id="timer"></div>
+	<
+<label class="container"><input type="radio" name="radio" onclick="panelSwitch('detour', 'detour1')">Enter the closest bus, or train, or whatever
+</label>
+<label class="container"><input type="radio" name="radio" onclick="panelSwitch('detour', 'detour2')">Leg it as fast as you can
+</label>
+    </div>
+  </div>
+  </div>
+  
+  <div id="walkup2" class="hidden">
+    <div class="container text-background">
+      <img src="images/dragon-fire-png.png" />
+      <p>
+		No later than you uttered the words "sure, why not", a friendly arm wrapped around your neck and lead you along, deeper into a side street. Prodded along with helping hands from the rest of the group, you were only halfway surprised when you realized the friendly grasp had turned into a full-on headlock.
+		</p>
+      <p>
+		You protest, but all you get for your words is a kick to the shins. You're going to answer some questions about your last night in the streets. The one when you betrayed them to the cops that is.
+		</p>
+      <div class="container">
+	<div id="timer"></div>
+	<label class="container"><input type="radio" name="radio" onclick="panelSwitch('walkup2', 'walkup3')">Try to fight them and run away
+</label>
+<label class="container"><input type="radio" name="radio" onclick="panelSwitch('walkup2', 'walkup4')">Go with them and talk your way out
+</label>
+    </div>
+  </div>
+  </div>
+  
+  <div id="walkup3" class="hidden">
+    <div class="container text-background">
+      <img src="images/dragon-fire-png.png" />
+      <p>
+		You finally give in to the little voice in the back of your head that's now screaming at you to do something to away from these bastards. Maybe you should've listened earlier into the crescendo; using your slick combatives skills you wrap your arms around the waist of the guy leading your neck along, only to fall down on the ground as, unlike in training, his vice grip on your neck only clamped harder.
+		</p>
+      <p>
+		Before you know it, your entire body is being racked by steel-tipped toes, brass knuckles and you can feel at least one sharp object sinking into your midsection as you're helpless, curled into a fetal position in an attempt to safeguard yourself. The punishment lasts for an eternity, and as you begin to lose consciousness a kick to your limping arms opens up your chest and belly to a knifer's blade.
+		</p>
+	<p>
+		You are vaguely aware of your body being torn apart as bloodloss and head trauma lull you into a welcoming darkness...
+	</p>
+      <div class="container">
+<button  onclick="defeat('walkup3')">Accept your fate</button>
+    </div>
+  </div>
+  </div>
+  
+  <div id="walkup4" class="hidden">
+    <div class="container text-background">
+      <img src="images/captured.jpg" />
+      <p>
+		You allow the group to take you deeper into the alleyway near which they were loafing around. Prodded on by shoves, kicks and harsh language, you make your way to the hideout you wish you had forgotten. And it seems you did, amidst the pleasantries of five minutes ago. On the other hand, they never forgot what they wanted out of you.
+		</p>
+      <p>
+		Before you know it, you're on the floor, and a knife is peeling away at your fingers. You're bombarded with questions about why you left the gang, how the cops knew about the stashe, how you're not arrested. With every question they ask, and with every answer that doesn't satisfy them, the agony begins anew. 
+		</p>
+		<p>
+		You slip away into a mental state of helplessness and resignation, spilling all the answers they demand to know.. Whether you will end up dead or not doesn't matter. Nothing matters right now..
+		</p>
+	  <div class="container">
+<button  onclick="defeat('walkup4')">Accept your fate</button>
+    </div>
+  </div>
+  </div>
+
+  <div id="darkstreet" class="hidden">
+    <div class="container text-background">
+      <img src="images/boy-shock-shadow.png" />
+      <p>
+		You really don't want to waste more time, so you take a turn two blocks away and into the backalley. You knew it from the times you were a free soul, an adventurer.. a drug dealer. Your neck of the woods wasn't always a cosmopolitan paradise, and a mixture of juvenile poor judgement, financial issues and peer pressure lead you down the path.
+        </p>
+      <p>
+		This backalley was the place of many a deal and beatdown and narrow escape from the police. The memories rush forth unbid as you hasten your pace.
+      </p>
+      <p>
+        Perhaps that's why you didn't see the man putting a gun in your head, or his buddies for that matter. "You son of a bitch, you sold us out!" The accusation reminds you of how you got out of the life.. you told the cops where these clowns hid their stashes of guns and drugs. So much for witness protection.
+      </p>
+	  <p>
+		You are staring down the barrel of a glock, and an angry street thug you betrayed is hollering accusations at you in a dark alley.. but he hasn't shot yet.
+	  </p>
+      <div class="container">
+	<div id="timer"></div>
+	<label class="container"><input type="radio" name="radio" onclick="timedPanelSwitch('darkstreet', 'darkstreetfight')">Fight your way out
+</label>
+<label class="container"><input type="radio" name="radio" onclick="timedPanelSwitch('darkstreet', 'darkstreettalk')">Talk your way out
+</label>
+    </div>
+    </div>
+  </div>
+  
+  <div id="darkstreetfight" class="hidden">
+    <div class="container text-background">
+      <img src="images/boy-shock-shadow.png" />
+      <p>
+		Head-on confrontation against an armed gang! What could go wrong.. Letting your inner Batman take over, you attempt a disarm on the guy waving his gun in your face, that slick and fancy move you've been itching to pull out since you were first taught.
+		</p>
+      <p>
+		*BANG* You moved fast. You managed to get the gun away from the guy. But somewhere along the line of jerking a gun away from someone with an itchy trigger finger, you caused pressure on said trigger and it fired. At least it missed.. but now you have a hole in one shoulder.
+      </p>
+	  <p>Make a choice quickly!<p>
+	  <div class="container">
+	<div id="timer"></div>
+	<label class="container"><input type="radio" name="radio" onclick="panelSwitch('darkstreetfight','darkstreetfight1')">Shoot the guy
+	</label>
+	<label class="container"><input type="radio" name="radio" onclick="timedPanelSwitch('darkstreetfight','darkstreetfight2')">Don't shoot him, he's cover
+	</label>
+    </div>
+    </div>
+  </div>
+  
+  <div id="darkstreetfight1" class="hidden">
+    <div class="container text-background">
+      <img src="images/boy-shock-shadow.png" />
+      <p>
+		Time to start dropping bodies! Driven by self-preservation and riding the wave of adrenaline, you shove the gun's muzzle against the guy's belly, and fire. And fire again, and again, until he finally drops. Quickly you turn to the rest of his friends..
+		</p>
+      <p>
+		*CLICK* Only to discover you've unloaded an entire clip on one guy until he dropped. You don't have time to consider the implications of this before they hit you, very literally; a storm of bullets pelts away at your body and tears you apart, the gang turned firing squad avenging the death of their homie.
+		</p>
+	  <p>You feel your body collapse, before darkness overtakes you..<p>
+	  <div class="container">
+		<button  onclick="defeat('darkstreetfight1')">Accept your fate</button>
+    </div>
+    </div>
+  </div>
+  
+  <div id="darkstreetfight2" class="hidden">
+    <div class="container text-background">
+      <img src="images/boy-shock-shadow.png" />
+      <p>
+		Your combatives training has taught you the virtues of taking cover, at least.. in specific, using foes as cover. You manage to pistol-wipe the guy in front of you and stun him long enough to get him in a half-nelson. Keeping a tight grip, you 
+		</p>
+      <p>
+		*BANG* You moved fast. You managed to get the gun away from the guy. But somewhere along the line of jerking a gun away from someone with an itchy trigger finger, you caused pressure on said trigger and it fired. At least it missed.. but now you have a hole in one shoulder.
+      </p>
+	  <p>Make a choice quickly!<p>
+	  <div class="container">
+	<div id="timer"></div>
+	<label class="container"><input type="radio" name="radio" onclick="">Shoot the guy
+	</label>
+	<label class="container"><input type="radio" name="radio" onclick="">Don't shoot him, he's cover
+	</label>
+    </div>
+    </div>
+  </div>
+  
+  
+  
+    <div id="darkstreetfight4" class="hidden">
+    <div class="container text-background">
+      <img src="images/boy-shock-shadow.png" />
+      <p>
+		You hesitated, unsure of what to do in this stressful environment. Maybe you never truly paid heed to what you were being told, maybe you simply allowed the nerves to get you as it were.
+		</p>
+	  <p>Either way, the gun in your hands has been yanked away and you've been pinned by the neck to the wall. You can't quite make out what they're saying.</p>
+	  <p>As it seems someone in the throng of people out to get you has shot...</p> 
+	  <div class="container">
+	<button  onclick="defeat('darkstreetfight4')">Accept your fate</button>
+    </div>
+    </div>
+  </div>
+  
+  <div id="darkstreettalk" class="hidden">
+    <div class="container text-background">
+      <img src="images/boy-shock-shadow.png" />
+      <p>
+		Time stops for an endless instant; your mind rushes as you stumble for words. You have a gun pointed at you. They're accusing you of selling them out to the police. They think you did it. But they're not sure enough to pull the trigger.
+		</p>
+      <p>
+		You were caught by surprise, absorbed in your own thoughts. 
+      </p>
+      <p>
+        Perhaps that's why you didn't see the man wielding the pipe hitting your chin and putting a gun in your head, or his buddies for that matter. "You son of a bitch, you sold us out!" The accusation reminds you of how you got out of the life.. you told the cops where these clowns hid their stashes of guns and drugs. So much for witness protection.
+      </p>
+	  <p>
+		You are staring down the barrel of a glock, and an angry street thug you betrayed is hollering accusations at you in a dark alley.. but he hasn't shot yet.
+	  </p>
+      <div class="container">
+	<div id="timer"></div>
+	<label class="container"><input type="radio" name="radio" onclick="">Fight your way out
+</label>
+<label class="container"><input type="radio" name="radio" onclick="">Talk your way out
+</label>
+    </div>
+    </div>
+  </div>
+  
+
+	<div id="defeat" class="hidden">
+    <div class="container text-background">
+      <img src="images/boy-shock-shadow.png" />
+      <p>
+		It seems your alter ego has met a terrible fate. Fortunately this is just a test, and you are welcome to try again. Ponder upon what went wrong, how the events lead to your demise and hit the reload button to have another go.
+	</p>
+		<p>
+		Albeit based in real events, this is only a predetermined test; in a real life scenario many more factors would be at play.. The people whose experiences inspired this test have had to develop the ultimate survival skill: weaponizing their minds.
+		</p>
+		<p>
+			Should you wish to continue your journey into the realm of reality in a profoundly indifferent, hostile world, visit https://tus.thinkific.com/wmc and use the code: abc123 to get x% off your order. Don't play games when your life is on the line. We know we don't.
+		</p>
+		<p>
+			Visit https://www.totalurbansurvival.com/ for more great content. 
+		</p>
+      
+    </div>
+  </div>
+        <footer class="row">
+    <div class="container">
+      <div>
+        © Copyright Total Urban Survival 2019
+      </div>
+
+    </div>
+  </footer>
+  <script type="text/javascript" src="custom.js">
+  </script>
+    </body>
+</html>
